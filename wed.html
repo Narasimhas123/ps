@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  /* max-width: 1000px; */
+  /* height: 100%; */
+  position: relative;
+  margin: auto;
+}
+
+
+
+.slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      display: none;
+    }
+
+    .slideshow-container img.active {
+      display: block;
+    }
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+        .container {
+          position: relative;
+          
+        }
+      
+        
+        .container .btn {
+          position: absolute;
+          top: 75%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #dda53c;
+          color: rgb(230, 227, 227);
+          font-size: 16px;
+          padding: 12px 24px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          text-align: center;
+        }
+        
+        .container .btn:hover {
+          background-color: #dda53c;
+        }
+        .a{
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        @media screen and (max-width: 600px) {
+  .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    width: 100px;
+    height: 30px;
+   
+  }
+.btn .a{
+    font-size: 10px; font-size: 10px;
+ }
+}
+        </style>
+    <title>Document</title>
+</head>
+<body>
+  
+      <img width="100%" height="100%" src="Blog Headers Large- flower_1.jpg" alt="img">
+
+      <div class="slideshow-container">
+        <img class="slides active" src="7R500290.JPG" alt="Slide 1">
+        <img class="slides" src="7R500329.JPG" alt="Slide 2">
+        <img class="slides" src="7R500354.JPG" alt="Slide 3">
+        <!-- Add more images with class="slides" and different src attributes for more slides -->
+      </div>
+
+        
+      
+      <div style="display: flex; justify-content: center; align-items: center;">
+      <img width="100%" height="100%" src="Untitled Template_1.jpg" alt="img">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;"><img width="100%" height="100%" src="Blog Headers Large - Masterpieces_1.jpg" alt="img">
+    </div>
+    <div  class="container" style="display: flex; justify-content: center; align-items: center;">
+         <img width="100%" height="100%" src="Untitled Template_1-2.jpg" alt="img">
+         <button class="btn">
+            <a class="a" href="https://maps.app.goo.gl/3gpyRGCoZgrLMZQT8" target="_blank">View Map</a>
+        </button>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;"><img width="100%" height="100%" src="Blog Headers Large - Masterpieces_1-1 (1).jpg" alt="img">
+    </div>
+    
+    <div  class="container">
+
+        <img width="100%" height="100%" src="Untitled Template_1-1.jpg" alt="img">
+        <button class="btn">
+            <a class="a" href="https://maps.app.goo.gl/3gpyRGCoZgrLMZQT8" target="_blank">View Map</a>
+        </button>
+       
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <img width="100%" height="100%" src="invite.jpg" alt="img">
+    </div>
+    
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.4204037426075!2d76.90655149999999!3d13.753502699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb05d442d70e515%3A0x4f4aceaa1112e365!2sShree%20Annapoorneshwari%20Kalyana%20Mantapa!5e0!3m2!1sen!2sin!4v1702829742362!5m2!1sen!2sin" width="100%" height="100vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe> -->
+  
+   
+      
+    <script>
+      // JavaScript for slideshow
+      let slideIndex = 0;
+      const slides = document.getElementsByClassName("slides");
+    
+      function showSlides() {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds (2000ms)
+      }
+    
+      showSlides();
+    </script>
+
+    
+</body>
+</html>
